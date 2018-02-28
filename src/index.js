@@ -4,11 +4,9 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import TodoApp from './components/TodoApp';
 import todoApp from './reducers/todoApp';
+import { loadStorage } from './localStorage';
 
-const persistedStore = {
-  todos: [],
-  visibilityFilter: undefined
-};
+const persistedStore = loadStorage();
 const store = createStore(todoApp, persistedStore);
 
 ReactDOM.render(
