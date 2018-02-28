@@ -10,7 +10,7 @@ const Link = ({
   }
   return (
     <a
-      href="#"
+      href=""
       onClick={(e) => {
         e.preventDefault();
         onClick();
